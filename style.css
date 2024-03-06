@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.background {
+    height: 100vh;
+    /* Set height to viewport height */
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    /* Fixed position to prevent scrolling */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Set z-index to send it to the back */
+}
+.logo{
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.logo ul {
+    position: absolute;
+    top: 10px;
+    right: 95px;
+    list-style-type: none;
+}
+.logo ul li{
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+.logo ul li:first-child {
+    margin-left: 0;
+    
+}
+.logo ul li:last-child{
+    margin-right: 0;
+}
+.logo ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    position: relative;
+}
+.logo ul li a::before {
+    content: "";
+    /* Add content for pseudo-element */
+    position: absolute;
+    /* Set position to absolute */
+    bottom: 0;
+    /* Position at the bottom of the link */
+    left: 0;
+    /* Align with the left edge of the link */
+    width: 0%;
+    /* Initially set width to 0 */
+    height: 2px;
+    /* Set height for the underline */
+    background-color: #fff;
+    /* Set color for the underline */
+    transition: width 0.3s ease;
+    /* Add transition effect */
+}
+.logo ul li a:hover::before {
+    width: 100%;
+    /* Expand the width on hover */
+}   
+.paragraph{
+    position: absolute;
+    top: 45%;
+    left: 38%;
+    transform: translate(-50%,-50%);
+}
+.paragraph h1{
+    font-size: 48px;
+    color: #fff;
+}
+.paragraph p{
+    color: #fff;
+}
+.buttons{
+    position: absolute;
+    top: 52%;
+    left: 33%;
+    transform: translateX(-50%);
+}
+.buttons button {
+    margin: 10px;
+    padding: 15px 30px;
+    /* Adjust padding to increase button size */
+    background-color: #f5168d;
+    /* Set background color */
+    color: #fff;
+    /* Set text color */
+    border: none;
+    /* Remove default button border */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    cursor: pointer;
+    /* Set cursor to pointer on hover */
+    font-size: 18px;
+    /* Set font size */
+    transition: background-color 0.3s;
+    /* Smooth transition for background color change */
+}
+
+.buttons button:hover {
+    background-color: #d40f7c;
+    /* Darken button color on hover */
+}
